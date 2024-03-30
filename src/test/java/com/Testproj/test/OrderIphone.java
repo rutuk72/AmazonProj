@@ -12,11 +12,8 @@ public class OrderIphone extends browser {
 
         AmazonHomePage obj=new AmazonHomePage();
 
-        Thread.sleep(5000);
-
         obj.SearchforMobile();
-        Thread.sleep(5000);
-
+        Thread.sleep(2000);
         obj.ClickonPhone();
         String actulPrice=obj.ValidatePrice();
         System.out.println(actulPrice);

@@ -6,13 +6,15 @@ import org.openqa.selenium.WebDriver;
 public class AmazonHomePage {
  private WebDriver driver;
 
- private By Searchbox = By.xpath("//input[@id='twotabsearchtextbox']");
+ private By Searchbox = By.xpath("//input[@placeholder='Search Amazon.in']");
 private By IphoneBlue = By.xpath("//span[normalize-space()='iPhone 13 (128GB) - Blue']");
-private By PriceIphone = By.xpath("//span[normalize-space()='51,499']");
+private By PriceIphone = By.xpath("//span[normalize-space()=" +
+        "'51,499']");
 
 
 
  public void SearchforMobile(){
+     driver.findElement(Searchbox).click();
      driver.findElement(Searchbox).sendKeys("Mobile");
  }
 

@@ -20,9 +20,9 @@ public class browser {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://www.amazon.in/");
-
-
-
+        Thread.sleep(5000);
+        driver.navigate().refresh();
+        Thread.sleep(5000);
 
     }
 
